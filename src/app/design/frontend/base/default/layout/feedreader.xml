@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <layout version="0.1.0">
-	<default>
+	<cms_index_index>
 		<reference name="head">
 			<action method="addCss"><stylesheet>css/feedreader.css</stylesheet></action>
 		</reference>
@@ -10,5 +10,5 @@
 				<action method="setItemCount"><itemCount>4</itemCount></action>
 			</block>
 		</reference>
-	</default>
+	</cms_index_index>
 </layout>
