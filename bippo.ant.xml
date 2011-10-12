@@ -22,7 +22,7 @@
 		<fail unless="server.dir"/>
 		<sshexec host="${server.host}" username="${server.user}" port="${server.port}"
 			keyfile="${user.home}/.ssh/id_rsa" trust="true"
-			command="rm -rvf ${server.dir}/var/cache/*"/>
+			command="rm -rf ${server.dir}/var/cache/*"/>
 	</target>
 
 	<target name="remote.compile" description="Recompile Magento includes on server.">
