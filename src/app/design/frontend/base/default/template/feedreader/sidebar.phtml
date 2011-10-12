@@ -12,7 +12,7 @@
 <?php if($this->getItemCount() > 0): ?>
 <div class="block block-feed-reader">
 	<div class="block-title">
-		<strong><?php echo $this->escapeHtml($this->getTitle()); ?></strong>
+		<strong><?php echo $this->escapeHtml(unhtmlentities(strip_tags($this->getTitle()))); ?></strong>
 	</div>
 	<div class="block-content">
 		<ol id="feed-items">
@@ -30,7 +30,7 @@
 				</p>
 				<p class="summary">
 					<a href="<?php echo $this->escapeHtml($this->getFeedLink($item)); ?>">
-						<?php echo $this->escapeHtml(Mage::helper('core/string')->truncate(strip_tags($this->getFeedContent($item)), 100, '...', $remainder, false)); ?>
+						<?php echo $this->escapeHtml(Mage::helper('core/string')->truncate( unhtmlentities(strip_tags($this->getFeedContent($item))), 100, '...', $remainder, false)); ?>
 					</a>
 				</p>
 			</li>
